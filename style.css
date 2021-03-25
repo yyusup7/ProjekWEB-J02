@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lucida Grande";
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: left;
+}
+
+
+
+/******************************************************/
+/******************** Desain Menu *********************/
+/******************************************************/
+body {
+    background-color: #ece8e5;
+}
+
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    animation-name: animasi;
+    animation-duration: 4s;
+    animation-iteration-count: 4;
+    animation-direction: alternate-reverse;
+
+}
+
+@keyframes animasi {
+    0% {
+        background-color: #19d68e;
+
+    }
+
+    25% {
+        background-color: rgb(60, 74, 112);
+
+    }
+
+    50% {
+        background-color: rgb(24, 236, 208);
+    }
+
+    75% {
+        background-color: rgb(58, 58, 56);
+
+    }
+
+    100% {
+        background-color: rgb(105, 34, 73);
+
+    }
+}
+
+.logo {
+    width: 65px;
+
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+    margin-right: -5px;
+}
+
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+
+/*batas header*/
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.top-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url(bg.png);
+    background-size: contain;
+    color: white;
+    text-align: center;
+}
+
+.top-wrapper h1 {
+    opacity: 0.7;
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.top-wrapper p {
+    opacity: 0.7;
+    margin-bottom: 3px;
+}
+
+/* batas container*/
+.lesson-wrapper {
+    padding-bottom: 80px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.heading {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    color: #0c0a0c;
+}
+
+.heading h2 {
+    font-weight: normal;
+}
+
+.lesson {
+
+    float: left;
+    width: 25%;
+}
+
+.lesson-icon {
+    position: relative;
+}
+
+.lesson-icon p {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    color: white;
+    right: 5%;
+}
+
+.txt-contents {
+    width: 80%;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #575757;
+}
+
+.heading h3 {
+    font-weight: normal;
+}
+
+/*batas heading*/
+
+footer img {
+    width: 125px;
+}
+
+footer p {
+    color: #0c0b0c;
+    font-size: 12px;
+}
+
+footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: paleturquoise;
+}
+
+/* batas */
+nav ul {
+    padding: 0;
+    margin: 0 auto;
+    width: 500px;
+    height: 40px;
+}
+
+nav li {
+    display: inline;
+    float: left;
+}
+
+nav a {
+    color: #f8f0f0;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    float: left;
+}
+
+nav a:hover,
+nav a:active {
+    background-color: #00b1dd;
+    color: #333;
+}
+
+nav a#pull {
+    display: none;
+}
+
+
+
+/* Untuk Tablet */
+@media all and (max-width: 1000px) {
+    .top-wrapper h1 {
+        font-size: 32px;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .lesson {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .top-wrapper h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .top-wrapper p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .lesson {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    /*batas nav*/
+
+    nav {
+        height: auto;
+        border-bottom: 0;
+        background: rgba(34, 49, 52, 0.9);
+    }
+
+    nav ul {
+        width: 100%;
+        display: none;
+        height: auto;
+    }
+
+    nav li {
+        width: 100%;
+        float: none;
+        display: block;
+        background: #ffffff;
+    }
+
+    nav li a {
+        border-bottom: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+    }
+
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        color: #333333;
+    }
+
+    nav a#pull {
+        display: block;
+        background-color: #bfc0c0;
+        width: 100%;
+        position: relative;
+        color: #ffffff;
+    }
+
+    nav a#pull:after {
+        content: "";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+/******************************************************/
+/*************** Desain Menu Responsive ***************/
+/******************************************************/
+
+/* Desain untuk perangkat dengan layar 600px kebawah*/
+@media screen and (max-width: 200px) {
+    .header-right {
+        display: none;
+    }
+
+    .top-wrapper {
+        text-align: left;
+    }
+
+    .top-wrapper h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .top-wrapper p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .lesson {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+
+    /* batass nov */
+    nav {
+        height: auto;
+        border-bottom: 0;
+        background: rgba(34, 49, 52, 0.9);
+    }
+
+    nav ul {
+        width: 100%;
+        display: none;
+        height: auto;
+    }
+
+    nav li {
+        width: 100%;
+        float: none;
+        display: block;
+        background: #ffffff;
+    }
+
+    nav li a {
+        border-bottom: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+    }
+
+    nav a {
+        text-align: left;
+        width: 100%;
+        text-indent: 25px;
+        color: #333333;
+    }
+
+    nav a#pull {
+        display: block;
+        background-color: #bfc0c0;
+        width: 100%;
+        position: relative;
+        color: #ffffff;
+    }
+
+    nav a#pull:after {
+        content: "";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
